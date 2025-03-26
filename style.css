@@ -84,3 +84,70 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: rgba(255, 255, 255, .1);
+  border: 2px solid rgba(255, 255, 255, .1);
+  border-radius: 8px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper .form-box {
+  position: relative;
+  width: 100%;
+  padding: 40px;
+  color: white;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+  margin: 30px 0;
+}
+
+.inputBox::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+
+.inputBox:focus-within::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.inputBox .icon {
+  position: absolute;
+  left: 0;
+  top: 69%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px 10px 10px 25px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
